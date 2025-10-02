@@ -1,0 +1,29 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+	<h1 class="text-xl mt-4">{frontmatter.title}</h1>
+	<h2 class="text-lg mt-3">{frontmatter.subtitle}</h2>
+	<p class="text-md mb-5">{frontmatter.date}</p>
+
+	<div class="prose">
+		<!-- Markdown goes here -->
+		<slot />
+	</div>
+
+	<p class="mt-6 mb-4">
+		Tags: {
+			frontmatter.tags.map((tag, index) => (
+				<Fragment
+					set:html={
+						`<a href="/tags/${tag}">${tag}</a>` +
+						(index < frontmatter.tags.length - 1 ? ", " : "")
+					}
+				/>
+			))
+		}
+	</p>
+</BaseLayout>

@@ -1,0 +1,15 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { allPosts, uniqueTags } from "../../lib/tags";
+const pageTitle = "Tags";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+	<div>
+		{uniqueTags.map((tag) => (
+			<p class="tag">
+				<a href={`/tags/${tag}`}>{tag}</a>
+			</p>
+		))}
+	</div>
+</BaseLayout>

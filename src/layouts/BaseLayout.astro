@@ -1,3 +1,8 @@
+---
+import '../styles/style.css';
+import Navbar from '../components/Navbar.astro';
+const { pageTitle } = Astro.props;
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,18 +10,13 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Caden Parajuli</title>
+		<title>Caden Parajuli - {pageTitle}</title>
 	</head>
 	<body>
-		<slot />
+		<Navbar />
+
+		<div class="max-w-4xl mx-auto px-4 my-4">
+			<slot />
+		</div>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

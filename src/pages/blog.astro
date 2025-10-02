@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogpostCard from "../components/BlogpostCard.astro";
+import { allPosts } from "../lib/tags";
+
+---
+
+<BaseLayout pageTitle="Blog">
+	<h1 class="text-xl my-5">Blog</h1>
+
+	<ul>
+		{allPosts.map((post: any) => <BlogpostCard post={post} />)}
+	</ul>
+</BaseLayout>

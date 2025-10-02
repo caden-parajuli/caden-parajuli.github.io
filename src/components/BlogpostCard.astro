@@ -1,0 +1,10 @@
+---
+const { post } = Astro.props;
+---
+
+<li>
+  <a class="card card-border w-96 bg-base-100 shadow-sm" href={post.url}>
+    <h2 class="card-title">{post.frontmatter.title}</h2>
+    <p>{post.frontmatter.subtitle}</p>
+  </a>
+</li>

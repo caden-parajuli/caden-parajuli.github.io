@@ -17,7 +17,6 @@
         devShell = mkShell rec {
           nativeBuildInputs = [
             typescript
-            tailwindcss_4
 
             nodePackages.typescript-language-server
             astro-language-server
