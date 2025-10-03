@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @plugin "daisyui";
 @plugin "daisyui/theme" {
   name: "dracula";
@@ -12,3 +13,5 @@
   prefersdark: false;
   --color-primary: mediumslateblue;
 };
+
+@plugin "@tailwindcss/typography";

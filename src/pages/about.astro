@@ -2,7 +2,38 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout pageTitle="About">
-	<h1 class="text-xl">About Me</h1>
+<BaseLayout pageTitle="Home">
+  <div class="prose max-w-none p-4 bg-base-200">
+    <h1 class="text-2xl my-5">Caden Parajuli</h1>
+    <p>
+      I am a programmer and longtime Linux user living in Boston. I'm currently working as
+      a part-time remote instructor at <a href="https://lsc.edu" class="link link-primary">Lake Superior College</a>
+      and as a research associate at <a href="https://bc.edu" class="link link-primary">Boston College</a>,
+      where I do research in programming languages and type theory.
+    </p>
+
+    <h3>Other Interests</h3>
+    <p>
+      I have a number of interests outside programming.
+      My first love was pure mathematics, and I still am fascinated by algebraic topology and number theory,
+      though I don't have as much time to spend in those worlds anymore.
+      I enjoy hiking, but living in Boston has forced me to settle for meandering about the city most of the time.
+      I have an increasingly long list of books (mainly fantasy/sci-fi) on
+      <a href="https://bookwyrm.social/user/tarix29/books/to-read" class="link link-primary">my "to read" list</a>.
+    </p>
+
+    <h3>Preferred Tools</h3>
+    <p>
+      These are the tools I <i>enjoy</i> working with. I have used many programming languages and a variety of other tools, but haven't we all?
+      These are just the ones I enjoy using.
+    </p>
+
+    <ul>
+      <li><strong>Programming languages:</strong> OCaml, Go, Rust, C, perhaps even Haskell</li>
+      <li><strong>Operating systems:</strong> Linux (NixOS), Android/GrapheneOS
+      <li><strong>Specialized operating systems:</strong> FreeRTOS, OpenWRT</li>
+      <li><strong>Text editor:</strong> Neovim (I left the Church of Emacs in 2023)</li>
+    </ul>
+  </div>
 </BaseLayout>
 
